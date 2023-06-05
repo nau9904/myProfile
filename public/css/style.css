@@ -4,3 +4,30 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+.bg-gradient-primary-to-success {
+    background: #1e30f3;
+    background: linear-gradient(135deg, #1e30f3 0%, #0ce843 100%);
+  }
+.bg-gradient-primary-to-success-to-white {
+  background: #1e30f3;
+  background: linear-gradient(#1e30f3 0%, #0ce843 100%);
+}
+.btn-dark:hover {
+  background-color: white;
+  color: black;
+}
+.bg-img {
+  border-radius: 20%;
+  transition: all 200ms ease-out;
+}
+.bg-img:hover {
+  box-shadow: rgba(249, 245, 3, 0.95) 0px 54px 55px, rgba(249, 245, 3, 0.95) 0px -12px 30px, rgba(249, 245, 3, 0.95) 0px 4px 6px, rgba(249, 245, 3, 0.95) 0px 12px 13px, rgba(249, 245, 3, 0.95) 0px -3px 5px;;
+}
+
+.card:hover {
+  box-shadow: 0 1rem 3rem rgb(180, 180, 180);
+  /* box-shadow: rgba(89, 226, 180, 0.95) 0px 5px 5px, rgba(89, 226, 180, 0.95) 0px -5px 5px, rgba(89, 226, 180, 0.95) 0px 5px 5px, rgba(89, 226, 180, 0.95) 0px 5px 5px, rgba(89, 226, 180, 0.95) 0px -5px 5px;; */
+}
+a:link{
+  text-decoration: none;
+}
