@@ -1,4 +1,163 @@
 
+/* Language */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .en {
+  background-image: url(us.svg);
+  background-repeat: no-repeat;
+}
+.wrapper .vi {
+  background-image: url(vn.svg);
+  background-repeat: no-repeat;
+}.wrapper .ko {
+  background-image: url(kr.svg);
+  background-repeat: no-repeat;
+}
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .en:hover,
+.wrapper .en:hover .tooltip,
+.wrapper .en:hover .tooltip::before {
+  color: black;
+}
+
+.wrapper .vi:hover,
+.wrapper .vi:hover .tooltip,
+.wrapper .vi:hover .tooltip::before {
+  color: black;
+}
+
+.wrapper .ko:hover,
+.wrapper .ko:hover .tooltip,
+.wrapper .ko:hover .tooltip::before {
+  color: black;
+}
+
+
+
+
+/* Button */
+.send-btn {
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(to bottom, #4dc7d9 0%,#66a6ff 100%);
+  color: white;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.send-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.send-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.send-btn span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+.send-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+.send-btn .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+.send-btn:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.send-btn:hover svg {
+  transform: rotate(45deg);
+}
+
+
+
 .text-gradient {
     background: -webkit-linear-gradient(315deg, #1e30f3 0%, #08eb32 100%);
     -webkit-background-clip: text;
@@ -87,6 +246,13 @@ a:link{
   fill: #1e30f3;
 }
 
+@media (min-width: 300px) {
+  .wrapper .icon{
+    width: 25px;
+    height: 25px;
+  }
+}
+
 @media (min-width: 576px) {
   .profile {
     height: 60vw;
@@ -94,6 +260,10 @@ a:link{
   }
   .profile .profile-img {
     height: 65vw;
+  }
+  .wrapper .icon {
+    width: 30px;
+    height: 30px;
   }
   
 }
@@ -105,6 +275,10 @@ a:link{
   .profile .profile-img {
     height: 55vw;
   }
+  .wrapper .icon{
+    width: 35px;
+    height: 35px;
+  }
  
 }
 @media (min-width: 992px) {
@@ -115,6 +289,10 @@ a:link{
   .profile .profile-img {
     height: 45vw;
   }
+  .wrapper .icon{
+    width: 40px;
+    height: 40px;
+  }
   
 }
 @media (min-width: 1200px) {
@@ -124,6 +302,10 @@ a:link{
   }
   .profile .profile-img {
     height: 40vw;
+  }
+  .wrapper .icon{
+    width: 45px;
+    height: 45px;
   }
   
 }
